@@ -1,0 +1,10 @@
+  
+<h1>Please Login to Polls App.</h1>
+
+<form action="{% url 'signup:login' %}" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Login">
+</form>
+
+<p>or <a href= "{% url 'signup:signup' %}">Sign Up</a></p>
